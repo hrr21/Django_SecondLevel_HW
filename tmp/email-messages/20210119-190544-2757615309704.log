@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGhlbGxvMw==?=
+From: django@geekshop.local
+To: hello3@mail.ru
+Date: Tue, 19 Jan 2021 16:05:44 -0000
+Message-ID: <161107234495.6116.8052706056446542252@DESKTOP-D4GVQBC>
+
+Для подтверждения учетной записи hello3 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/hello3@mail.ru/beb332df09443745eba2cd887b47d14bae33feb4
+-------------------------------------------------------------------------------

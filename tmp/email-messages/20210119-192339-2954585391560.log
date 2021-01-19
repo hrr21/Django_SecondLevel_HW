@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGxvZ2lu?=
+From: django@geekshop.local
+To: login@mail.ru
+Date: Tue, 19 Jan 2021 16:23:39 -0000
+Message-ID: <161107341966.8772.18098171830200458335@DESKTOP-D4GVQBC>
+
+Для подтверждения учетной записи login на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/login@mail.ru/45176d888fd41abc4adc286f4f4906456790fdb1
+-------------------------------------------------------------------------------
