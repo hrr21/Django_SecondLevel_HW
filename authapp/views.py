@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import auth, messages
 from django.urls import reverse
-from authapp.forms import UserLoginForm, UserRegisterForm, UserProfileForm
+from authapp.forms import UserLoginForm, UserRegisterForm, UserProfileForm, UserProfileEditForm
 from basketapp.models import Basket
 from django.core.mail import send_mail
 from django.conf import settings
@@ -66,18 +66,23 @@ def register(request):
 
 
 def profile(request):
+    title = 'редактирование'
+
     if request.method == 'POST':
-        form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
-        if form.is_valid():
+        form = UserProfileForm(request.POST, request.FILES, instance=request.user)
+        profile_form = UserProfileEditForm(request.POST, instance=request.user.userprofile)
+        if form.is_valid() and profile_form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('authapp:profile'))
     else:
         form = UserProfileForm(instance=request.user)
-
+        profile_form = UserProfileEditForm(instance=request.user.userprofile)
     baskets = Basket.objects.filter(user=request.user)
     context = {
+        'title': title,
         'form': form,
         'baskets': baskets,
+        'profile_form': profile_form
     }
 
     return render(request, 'authapp/profile.html', context)
